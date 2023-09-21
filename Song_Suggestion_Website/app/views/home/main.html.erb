@@ -1,0 +1,17 @@
+<h1>Taylor Swift: Evermore</h1>
+<table>
+<tr>
+    <th> Loves </th>
+    <th> Likes </th>
+    <th> Song Name </th>
+</tr>    
+<% @songs.each do |song|%>
+<tr>
+    <td> <%=song.loves%> <td>
+    <td> <%=song.likes%> <td>
+    <td> <%=song.name%> 
+    <%= link_to "Like", song_like_path(song), method: :put, class: "btn btn-primary"  %>
+    <td>
+</tr>
+<%end%>
+</table>
